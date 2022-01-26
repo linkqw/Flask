@@ -83,7 +83,6 @@ app.config.from_object(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///nkedb.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config.update(dict(DATABASE=os.path.join(app.root_path, 'nkedb.db')))
-app.config['SECRET_KEY'] = '3e301b1682e2833089377a8c440e19416ac7f6c9'
 app.permanent_session_lifetime = datetime.timedelta(days=7)
 
 db = SQLAlchemy(app)
